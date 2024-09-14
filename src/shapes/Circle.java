@@ -37,6 +37,9 @@ public class Circle implements Shape
 	{
 		Circle c = new Circle(100);
 		c.renderAsJpeg(new File("c:\\temp\\circle_radius100.jpg"));
+		
+		Square s = new Square(100);
+		s.renderAsJpeg(new File("c:\\temp\\square_side_100.jpg"));
 	}
 	
 	@Override
