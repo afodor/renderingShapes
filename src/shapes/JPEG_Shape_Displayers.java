@@ -1,5 +1,6 @@
 package shapes;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -17,14 +18,24 @@ public class JPEG_Shape_Displayers
 	
 	public static void main(String[] args) throws Exception
 	{
+		Color[] colors = {Color.BLACK, Color.GRAY, Color.GREEN, Color.RED, Color.BLUE}; 
+		
 		List<Shape> list = new ArrayList<>();
 		
 		for( int x=1; x<= 5; x++)
-			list.add(new Circle(20*x));
+		{
+			Circle c = new Circle(20*x);
+			c.setColor(colors[x-1]);
+			list.add(c);
+		}
 		
 		for( int x=1; x <= 5; x++)
-			list.add(new Square(20*x));
-		
+		{
+			Square sq = new Square(20*x);
+			sq.setColor(colors[x-1]);
+			list.add(sq);
+		}
+					
 		ShowImages(list);
 	}
 	   

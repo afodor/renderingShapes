@@ -7,7 +7,7 @@ import java.io.File;
 
 import javax.imageio.ImageIO;
 
-public class Square implements Shape
+public class Square extends Shape
 {
 	private final double sideLength;
 	
@@ -47,7 +47,7 @@ public class Square implements Shape
         g2d.fillRect(0, 0, width, height);
 
         // Set the square color (black)
-        g2d.setColor(Color.BLACK);
+        g2d.setColor(getColor());
 
         // Draw the square centered in the image
         int x = (int)( (width - sideLength) / 2);

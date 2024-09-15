@@ -7,7 +7,7 @@ import java.io.File;
 
 import javax.imageio.ImageIO;
 
-public class Circle implements Shape
+public class Circle extends Shape
 {
 	private final double radius;
 	
@@ -62,7 +62,7 @@ public class Circle implements Shape
         g2d.fillRect(0, 0, width, height);
 
         // Set the circle color (black)
-        g2d.setColor(Color.BLACK);
+        g2d.setColor(getColor());
 
         // Draw the circle centered in the image
         double x = (width - 2 * r) / 2;
