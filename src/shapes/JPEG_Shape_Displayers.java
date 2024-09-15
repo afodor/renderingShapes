@@ -55,8 +55,8 @@ public class JPEG_Shape_Displayers
 	          // Create a JLabel with the ImageIcon
 	          JLabel label = new JLabel(icon);
 	                
-	                // Add the label to the panel
-	                panel.add(label);
+	          // Add the label to the panel
+	          panel.add(label);
 	      }
 
 	       // Add the panel to the frame
