@@ -29,12 +29,20 @@ public class JPEG_Shape_Displayers
 			list.add(c);
 		}
 		
+		for(int x=1; x <= 5; x++)
+		{
+			Triangle t = new Triangle(20*x, 30*x);
+			t.setColor(colors[x-1]);
+			list.add(t);
+		}
+		
+		/*
 		for( int x=1; x <= 5; x++)
 		{
 			Square sq = new Square(20*x);
 			sq.setColor(colors[x-1]);
 			list.add(sq);
-		}
+		}*/
 					
 		ShowImages(list);
 	}
