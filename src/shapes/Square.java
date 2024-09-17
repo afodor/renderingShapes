@@ -11,6 +11,12 @@ public class Square extends Shape
 {
 	private final double sideLength;
 	
+	@Override
+	public String getAuthor()
+	{
+		return "Anthony";
+	}
+	
 	public Square(double sideLength)
 	{
 		this.sideLength = sideLength;
@@ -46,6 +52,7 @@ public class Square extends Shape
         g2d.setColor(Color.WHITE);
         g2d.fillRect(0, 0, width, height);
 
+        
         // Set the square color (black)
         g2d.setColor(getColor());
 
@@ -54,6 +61,7 @@ public class Square extends Shape
         int y = (int) ((height - sideLength) / 2);
         g2d.fillRect(x, y, (int)sideLength, (int)sideLength);
 
+        addAuthorText(g2d, width, height);
         // Dispose the graphics object
         g2d.dispose();
 

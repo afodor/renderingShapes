@@ -20,6 +20,12 @@ public class Circle extends Shape
 	{
 		return radius;
 	}
+	
+	@Override
+	public String getAuthor()
+	{
+		return "Anthony";
+	}
 
 	@Override
 	public double getPerimiter()
@@ -61,6 +67,7 @@ public class Circle extends Shape
         g2d.setColor(Color.WHITE);
         g2d.fillRect(0, 0, width, height);
 
+        
         // Set the circle color (black)
         g2d.setColor(getColor());
 
@@ -69,6 +76,8 @@ public class Circle extends Shape
         double y = (height - 2 * r) / 2;
         g2d.fillOval((int)x, (int)y, (int)(2 * r), (int)(2 * r));
 
+        addAuthorText(g2d, width, height);
+        
         // Dispose the graphics object
         g2d.dispose();
 

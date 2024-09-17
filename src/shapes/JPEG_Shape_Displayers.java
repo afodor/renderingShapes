@@ -22,27 +22,26 @@ public class JPEG_Shape_Displayers
 		
 		List<Shape> list = new ArrayList<>();
 		
-		for( int x=1; x<= 5; x++)
+		for( int x=1; x<= 3; x++)
 		{
 			Circle c = new Circle(20*x);
 			c.setColor(colors[x-1]);
 			list.add(c);
 		}
 		
-		for(int x=1; x <= 5; x++)
+		for(int x=1; x <= 3; x++)
 		{
 			Triangle t = new Triangle(20*x, 30*x);
 			t.setColor(colors[x-1]);
 			list.add(t);
 		}
 		
-		/*
-		for( int x=1; x <= 5; x++)
+		for( int x=1; x <= 4; x++)
 		{
 			Square sq = new Square(20*x);
 			sq.setColor(colors[x-1]);
 			list.add(sq);
-		}*/
+		}
 					
 		ShowImages(list);
 	}

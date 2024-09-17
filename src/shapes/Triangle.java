@@ -48,6 +48,12 @@ public class Triangle extends Shape
 	}
 	
 	@Override
+	public String getAuthor()
+	{
+		return "Anthony";
+	}
+	
+	@Override
 	public void renderAsJpeg(File fileToJpeg) throws Exception
 	{
 		double b = this.base; // Base of the triangle
@@ -65,6 +71,7 @@ public class Triangle extends Shape
 	        g2d.setColor(Color.WHITE);
 	        g2d.fillRect(0, 0, width, height);
 	        
+	  
 	        // Set color for the triangle (black)
 	        g2d.setColor(this.getColor());
 	        
@@ -82,9 +89,12 @@ public class Triangle extends Shape
 	        
 	        // Draw the triangle
 	        g2d.fillPolygon(xPoints, yPoints, 3);
-	        
+	  
+
+	        addAuthorText(g2d, width, height);
 	        // Dispose the graphics object
 	        g2d.dispose();
+	        
 	        	            ImageIO.write(image, "jpeg", fileToJpeg);
 	            System.out.println("Triangle image saved as triangle.jpg");
 	}
